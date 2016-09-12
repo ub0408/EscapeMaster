@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="branch.branch">
+
+<select id="listBranch" resultType="BranchDTO">
+	select * from branch
+</select>
+
+<select id="getBranch" parameterType="int" resultType="BranchDTO">
+	select * from branch where branch_id = #{branch_id}
+</select>
+
+
+</mapper>

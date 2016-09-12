@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<properties resource="db.properties"/>
+
+<typeAliases>
+	<typeAlias type="branch.BranchDTO" alias="BranchDTO"/>
+	<typeAlias type="notice.NoticeDTO" alias="NoticeDTO"/>
+	<typeAlias type="room.RoomDTO" alias="RoomDTO"/>
+	<typeAlias type="qna.QnaDTO" alias="QnaDTO"/>
+</typeAliases>
+
+<environments default="development">
+<environment id="development">
+<transactionManager type="JDBC"/>
+<dataSource type="POOLED">
+<property name="driver" value="${driver}"/>
+<property name="url" value="${url}"/>
+<property name="username" value="${username}"/>
+<property name="password" value="${password}"/>
+</dataSource>
+</environment>
+</environments>
+
+<mappers>
+<mapper resource="branch/branch.xml"/>
+<mapper resource="notice/notice.xml"/>
+<mapper resource="room/room.xml"/>
+<mapper resource="qna/qna.xml"/>
+</mappers>
+
+</configuration>

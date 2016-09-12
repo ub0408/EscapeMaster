@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qna.qna">
+
+<select id="listQna" resultType="QnaDTO">
+	답글형으로해야되니까 쿼리 잘쓰고  //공지는 어차피 관리자만 쓰는거니까 게시자 일단 권한생각하지말고 글쓰기,수정,삭제 만들어봐
+</select>
+
+<select id="getQna" parameterType="int" resultType="QnaDTO">
+	여기는 글 제목 눌렀을때 상세보기
+</select>
+
+
+</mapper>

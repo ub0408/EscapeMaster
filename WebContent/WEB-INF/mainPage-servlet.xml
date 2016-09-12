@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="branchDAO" class="branch.BranchDAOImpl">
+	</bean>
+	<bean id="noticeDAO" class="notice.NoticeDAOImpl">
+	</bean>
+	<bean id="qnaDAO" class="qna.QnaDAOImpl">
+	</bean>
+
+	<bean class="branch.controller.BranchController">
+		<property name="branchDAO" ref="branchDAO"></property>
+	</bean>
+
+	<bean class="notice.controller.NoticeController">
+		<property name="noticeDAO" ref="noticeDAO"></property>
+	</bean>
+	
+	<bean class="qna.controller.QnaController">
+		<property name="qnaDAO" ref="qnaDAO"></property>
+	</bean>
+	
+</beans>
